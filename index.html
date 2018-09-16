@@ -1,1 +1,170 @@
-Hello World
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+    font-family: "Lato", sans-serif;
+}
+
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    right: 0;
+}
+
+.openbtn:hover {
+    background-color: #444;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+    margin-bottom: 2.5%;
+}
+
+#main button{
+    float: right;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidebar {padding-top: 15px;}
+    .sidebar a {font-size: 18px;}
+    #mySidebar {background-color: aqua; 
+}
+   
+</style>
+</head>
+<body>
+    
+<!-- From the "Considerations" portion of the homework: Feel free to take some liberty in the visual aspects, but keep the core functionality the same.
+The "liberty" I took was to clean up the menu by adding the Comparison and Data links within the navigation sidebar. -->
+    
+<div id="mySidebar" class="sidebar .navbar">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">X</a>
+  <a href="WebVisualization p2.html">Temperature</a>
+  <a href="WebVisualization p3.html">Humidity</a>
+  <a href="WebVisualization p4.html">Cloudiness</a>
+  <a href="WebVisualization p5.html">Wind Speed</a>
+  <a href="WebVisualization p6.html">Comparison</a>
+  <a href="WebVisualization p7.html">Data</a>
+</div>
+
+<div id="main">
+  <button class="openbtn" onclick="openNav()">Plots</button>  
+</div>
+
+<script>
+function openNav() {
+    document.getElementById("mySidebar").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidebar").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+}
+</script>
+     
+</body>
+</html> 
+  
+  <title>Dave's Project	</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="jumbotron text-center">
+  <h1>A Weather Analysis Nearing the Equator</h1>
+  <p>"How does the weather change when nearing the equator?"</p> 
+</div>
+<div class="container text-center">
+  <div class="row">
+		<div class="col-sm-12">
+      <h3>Latitude vs. Weather</h3>
+      <p>The purpose of this project was to analyze how weather changes as you get closer to the equator.</p> 
+        <p>To accomplish this analysis, we first pulled data from the OpenWeatherMap API to assemble a dataset on over 500 cities.</p>
+      <p>Afer assembling the dataset, we used Matplotlib to plot various aspects of the eather vs. latitude. Factors included: temperature, cloudiness, wind speed, and humidity. This site also provides the source data and visualizations created as part of the analysis, as well as explanations and descriptions of any trends and correlations found.</p>
+    </div>
+		<div class="col-sm-3">
+      <a href="WebVisualization p2.html">
+      <h3>Latitude vs. Temperature</h3>
+				<p>"Dry heat...wet heat: temperature, such a finiky operation."</p>
+      <p>"Let's cut the weather reporters a break. I mean, their entire career is based on guessing."</p>
+      </a>
+    </div>
+    <div class="col-sm-3">
+      <a href="WebVisualization p3.html">
+      <h3>Latitude vs. Humidity</h3>
+      <p>"More diverse than you might expect!"</p>
+      <p>"If 100% humidity is full saturation,</p>
+      <p>how come we don't have gills?"</p>
+    </a>
+    </div>
+    <div class="col-sm-3">
+      <a href="WebVisualization p4.html">
+      <h3>Latitude vs. Cloudiness</h3>        
+      <p>"That one looks like a turtle."</p>
+      <p>"Yeah, but turtles don't float in the air."</p>
+      </a>
+    </div>
+		 <div class="col-sm-3">
+      <a href="WebVisualization p5.html">
+      <h3>Latitude vs. Wind Speed</h3>        
+      <p>"Does wind make sound or does what it passes through make the sound?"</p>
+      <p>"I'm blown away with the depth of that question."</p>
+      </a>
+		</div>
+	
+  </div>
+</div>
+
+</body>
+</html>
+
